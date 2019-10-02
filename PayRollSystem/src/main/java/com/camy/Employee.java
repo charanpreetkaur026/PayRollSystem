@@ -2,19 +2,45 @@ package com.camy;
 
 import java.time.LocalDate;
 
-public abstract class Employee
+public abstract class Employee implements IPrintable
 {
 
       private String name;
       private int age;
 
+    public String getName() {
+        return name;
+    }
 
+    public void setName(String name) {
+        this.name = name;
+    }
 
-      int calcBirthYear(){
-          LocalDate currentYear= LocalDate.now();
-          int birthYear= currentYear.getYear();
+    public int getAge() {
+        return age;
+    }
 
-      }
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    protected Employee(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public int calcBirthYear(){
+          LocalDate currentDate= LocalDate.now();
+          int currentYear= currentDate.getYear();
+          int birthYear= currentYear-age;
+          return birthYear;
+    }
+    public abstract double calcEarnings();
+
+ public void printMyData(){
+    System.out.println("Employee Name:" + name);
+    System.out.println(" Birth Year:" + calcBirthYear());
+}
 
 
 
