@@ -2,17 +2,15 @@ package com.camy;
 
 public class FixedBasedPartTime extends PartTime implements IPrintable
 {
-    double FixedAmount = 40.00;
+    double fixedAmount ;
     double totalEarnings;
-    double calcEarnings()
-    {
-       totalEarnings= (getRate()* getHoursWorked())+ FixedAmount;
-       return totalEarnings;
+    public FixedBasedPartTime(String name, int age, float rate, float hoursWorked, double fixedAmount) {
+       super(name, age, rate, hoursWorked);
+        this.fixedAmount = fixedAmount;
     }
-
-    public FixedBasedPartTime(String name, int age, float rate, float hoursWorked, double fixedAmount, double totalEarnings) {
-        super(name, age, rate, hoursWorked);
-        FixedAmount = fixedAmount;
-        this.totalEarnings = totalEarnings;
+    public double calcEarnings()
+    {
+        totalEarnings= (getRate()* getHoursWorked())+ fixedAmount;
+        return totalEarnings;
     }
 }

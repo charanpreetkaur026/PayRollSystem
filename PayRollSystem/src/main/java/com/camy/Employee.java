@@ -38,8 +38,7 @@ public abstract class Employee implements IPrintable
     public abstract double calcEarnings();
 
  public void printMyData(){
-    System.out.println("Employee Name:" + name);
-    System.out.println(" Birth Year:" + calcBirthYear());
+
 }
 
 
