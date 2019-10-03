@@ -11,7 +11,7 @@ public class MainClass {
         System.out.println("...............................");
         FixedBasedPartTime emp2= new FixedBasedPartTime("Cindy", 40,30,10,40.0f );
         emp2.printMyData();
-        System.out.println("Hello check");
+        System.out.println("Hello check branch");
 
 
     }
