@@ -13,4 +13,17 @@ public class FixedBasedPartTime extends PartTime implements IPrintable
         totalEarnings= (getRate()* getHoursWorked())+ fixedAmount;
         return totalEarnings;
     }
+    public void printMyData(){
+        System.out.println();
+        System.out.println("Name:" + getName());
+        System.out.println("Year of Birth:" + calcBirthYear());
+        System.out.println("Employee has");// + vehicle);
+        System.out.println("Employee is Part Time / Fixed Amount Based "); //employeetype ...partTime/fulltime
+        System.out.println("Rate per hour: " + getRate());
+        System.out.println("Hours Worked: "+ getHoursWorked());
+        System.out.println("Fixed Amount:" + totalEarnings);
+        System.out.println(" Earnings: $"+ calcEarnings());
+
+
+    }
 }
