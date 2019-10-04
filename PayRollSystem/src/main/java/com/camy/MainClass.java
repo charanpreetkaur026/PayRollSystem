@@ -8,10 +8,12 @@ public class MainClass {
         System.out.println("...............................");
         CommissionBasedPartTime emp1 = new CommissionBasedPartTime("John", 22, 30f, 10, 20);
         emp1.printMyData();
-        System.out.println("...............................");
+        //System.out.println("...............................");
         FixedBasedPartTime emp2= new FixedBasedPartTime("Cindy", 40,30,10,40.0f );
         emp2.printMyData();
-        System.out.println("Hello check branch");
+        //System.out.println("Hello check branch");
+        Intern emp3=new Intern("Charan", 25, "lambton");
+        emp3.printMyData();
 
 
     }
